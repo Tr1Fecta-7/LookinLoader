@@ -45,11 +45,6 @@
 %ctor{
 
 	@autoreleasepool {
-
-    	NSDictionary* lookinSettings = [NSDictionary dictionaryWithContentsOfFile:@"/var/mobile/Library/Preferences/com.chinapyg.lookin.plist"];
-		NSString* bundleID = [[NSBundle mainBundle] bundleIdentifier];
-		BOOL appEnabled = [[lookinSettings objectForKey:[NSString stringWithFormat:@"LookinEnabled-%@",bundleID]] boolValue];
-		if (appEnabled) {
 			NSFileManager* fileManager = [NSFileManager defaultManager];
 
 			NSString* libPath = @"/usr/lib/Lookin/LookinServer.framework/LookinServer";
@@ -65,7 +60,4 @@
 				}
 			}
 		}
-
-	}
-
 }
