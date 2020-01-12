@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://github.com/creantan/LookinLoader/blob/master/example/LookinLoader.png">
   <br/>
-  LookinLoader
+  LookinLoader With SpringBoard injection
 </h1>
 
 <p align="center"><b>Compatible with iOS 8 to 13</b></p>
@@ -13,6 +13,10 @@
 </p>
 <p>
 	LookinLoader dynamically loads LookinServer (Lookin.app support) into iOS apps on jailbroken devices. Configuration is via the Lookin menu in Settings.app.
+</p>
+
+<p>
+	LookinLoader dynamically loads LookinServer (Lookin.app support) into iOS SpringBoard on jailbroken devices by daniel volt from ApexTweaks.
 </p>
 
 ![preview](https://github.com/creantan/LookinLoader/blob/master/example/preview.jpg "lookin" )
