@@ -4,15 +4,15 @@
   LookinLoader
 </h1>
 
-<p align="center"><b>Compatible with iOS 8 to 13</b></p>
+<p align="center"><b>Compatible with iOS 11 to 13 - ARM64e supported</b></p>
 
 [Lookin](https://lookin.work) Free macOS App for iOS View Debugging
 
 <p>
-	Because Lookin official did not provide the jailbreak version of the integration, causing inconvenience to the reverse analyst, so refer to RevealLoader to write this plugin that supports iOS8~iOS13, named LookinLoader
+	Because Lookin official did not provide the jailbreak version of the integration, causing inconvenience to the reverse analyst, so refer to RevealLoader to write this plugin that supports iOS11~iOS13, named LookinLoader
 </p>
 <p>
-	LookinLoader dynamically loads LookinServer (Lookin.app support) into iOS apps on jailbroken devices. Configuration is via the Lookin menu in Settings.app.
+	LookinLoader dynamically loads LookinServer (Lookin.app support) into iOS apps on jailbroken devices. Configuration is via the Lookin menu in Settings.app. 
 </p>
 
 ![preview](https://github.com/creantan/LookinLoader/blob/master/example/preview.jpg "lookin" )
@@ -34,16 +34,16 @@
 
 ***[Download Lookin App](https://lookin.work)***
 
-***[Download Tweak](https://github.com/creantan/LookinLoader/releases/download/v1.0.6/com.chinapyg.lookinloader_1.0.6-1_iphoneos-arm.deb.zip)***
+***[Download Tweak](https://github.com/Tr1Fecta-7/LookinLoader/releases/tag/v1.0.7)***
 
 ## Easy build
 
 ```bash
-git clone --recursive https://github.com/creantan/LookinLoader.git
+git clone --recursive https://github.com/Tr1Fecta-7/LookinLoader.git
 cd layout/usr/lib/Lookin/LookinServer.framework/
 ldid -S LookinServer
 cd ../../../../../
-make package FINALPACKAGE=1
+make clean do
 ```
 
 ## Samples
