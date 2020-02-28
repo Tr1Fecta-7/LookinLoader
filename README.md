@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://github.com/creantan/LookinLoader/blob/master/example/LookinLoader.png">
   <br/>
-  LookinLoader With SpringBoard injection by Daniel Volt
+  LookinLoader
 </h1>
 
 <p align="center"><b>Compatible with iOS 8 to 13</b></p>
@@ -9,13 +9,10 @@
 [Lookin](https://lookin.work) Free macOS App for iOS View Debugging
 
 <p>
-	LookinLoader dynamically loads LookinServer (Lookin.app support) into iOS apps on jailbroken devices. Configuration is via the Lookin menu in Settings.app.
-</p>
-
-![preview1](https://github.com/DanielVolt/LookinLoader/blob/master/example/Screenshot%202020-01-12%20at%2022.20.00.png?raw=true "lookin" )
-
-<p>
 	Because Lookin official did not provide the jailbreak version of the integration, causing inconvenience to the reverse analyst, so refer to RevealLoader to write this plugin that supports iOS8~iOS13, named LookinLoader
+</p>
+<p>
+	LookinLoader dynamically loads LookinServer (Lookin.app support) into iOS apps on jailbroken devices. Configuration is via the Lookin menu in Settings.app.
 </p>
 
 ![preview](https://github.com/creantan/LookinLoader/blob/master/example/preview.jpg "lookin" )

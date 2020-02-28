@@ -43,21 +43,24 @@
 
 
 %ctor{
+	NSDictionary* lookinSettings = [NSDictionary dictionaryWithContentsOfFile:@"/var/mobile/Library/Preferences/com.chinapyg.lookin.plist"];
+	NSString* bundleID = [[NSBundle mainBundle] bundleIdentifier];
+	BOOL appEnabled = [[lookinSettings objectForKey:[NSString stringWithFormat:@"LookinEnabled-%@",bundleID]] boolValue];
+	if (appEnabled || [bundleID isEqual:@"com.apple.springboard"]) {
+		NSFileManager* fileManager = [NSFileManager defaultManager];
 
-	@autoreleasepool {
-			NSFileManager* fileManager = [NSFileManager defaultManager];
+		NSString* libPath = @"/usr/lib/Lookin/LookinServer.framework/LookinServer";
 
-			NSString* libPath = @"/usr/lib/Lookin/LookinServer.framework/LookinServer";
-
-			if([fileManager fileExistsAtPath:libPath]) {
-				void *lib = dlopen([libPath UTF8String], RTLD_NOW);
-				if (lib) {
-					%init(UIDebug)
-					NSLog(@"[+] LookinLoader loaded!");
-				}else {
-					char* err = dlerror();
-					NSLog(@"[+] LookinLoader load failed:%s",err);
-				}
+		if([fileManager fileExistsAtPath:libPath]) {
+			void *lib = dlopen([libPath UTF8String], RTLD_NOW);
+			if (lib) {
+				%init(UIDebug)
+				NSLog(@"[Lookin] LookinLoader loaded!");
+			}else {
+				char* err = dlerror();
+				NSLog(@"[Lookin] LookinLoader load failed: %s",err);
 			}
 		}
+	}
+
 }

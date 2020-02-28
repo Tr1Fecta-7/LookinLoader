@@ -1,12 +1,16 @@
-ARCHS  = armv7 armv7s arm64 arm64e
-TARGET = iphone:latest:8.0
-ADDITIONAL_OBJCFLAGS = -fobjc-arc
+FINALPACKAGE=1
+export TARGET = iphone:clang:latest:11.0
+
 include $(THEOS)/makefiles/common.mk
+
+ARCHS = arm64 arm64e
 
 TWEAK_NAME = LookinLoader
 LookinLoader_FILES = Tweak.xm
+LookinLoader_CFLAGS = -fobjc-arc -Wno-deprecated-declarations
+
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
-	install.exec "killall -9 SpringBoard"
+	install.exec "sbreload"
